@@ -11,6 +11,14 @@
 - **Performance**: Linux is efficient and can run on a wide range of hardware, from old machines to powerful servers.
 
 
+## History of Linux
+
+- **1969**: Ken Thompson and Dennis Ritchie developed the UNIX operating system at Bell Laboratories.
+- **1980s**: Richard Stallman initiated the GNU project to create a free UNIX-like OS.
+- **GNU General Public License (GPL)**: Ensures software freedom.
+- **1991**: Linus Torvalds began developing the Linux kernel, which has become a cornerstone of modern operating systems.
+
+
 
 ## Understanding the Linux System
 
@@ -55,7 +63,19 @@ Package managers automate software installation, updates, and removal. Here are 
 
 ## Desktop Environments
 
-Desktop environments provide GUIs for Linux. Common ones include GNOME, KDE, XFCE, and more.
+Desktop environments (DEs) provide graphical user interfaces (GUIs) for Linux. Here are common ones used by different Linux distributions:
+
+| Desktop Environment | Description                                                                                            | Examples                                       |
+|---------------------|--------------------------------------------------------------------------------------------------------|------------------------------------------------|
+| GNOME               | Modern, intuitive, default in many distributions.                                                      | Ubuntu, Fedora, Debian                         |
+| KDE Plasma          | Highly customizable, feature-rich, suitable for power users.                                            | Kubuntu, Fedora KDE, openSUSE KDE              |
+| XFCE                | Lightweight, resource-efficient, suitable for older hardware.                                            | Xubuntu, Debian XFCE, Manjaro XFCE             |
+| LXQt                | Lightweight, Qt-based, successor to LXDE.                                                               | Lubuntu, Fedora LXQt, openSUSE LXQt            |
+| Cinnamon            | Easy-to-use, similar to traditional desktop layouts.                                                    | Linux Mint Cinnamon, Fedora Cinnamon            |
+| MATE                | Traditional, fork of GNOME 2, lightweight and customizable.                                             | Ubuntu MATE, Fedora MATE                        |
+| LXDE                | Lightweight, minimalistic, suitable for low-resource systems.                                            | Lubuntu, Knoppix                                |
+| Pantheon            | Designed for elementary OS, minimalist and elegant.                                                     | elementary OS                                   |
+
 
 ## Linux Distributions and Their Bases
 
