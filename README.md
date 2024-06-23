@@ -5,7 +5,7 @@
 ## SUDO 
 
 - **Definition:**
-  - Command in Unix-like systems allowing users to execute commands with administrative privileges by granting temporary administrative privileges.
+  - Command in Unix-like systems allowing users to execute commands with administrative privileges by granting temporary administrative privileges.(Every sudo command run gare paxi admin user password halnu paryo which make it temporary adminstrative privileged)
   
 - **Purpose:**
   - `sudo` (superuser do) is a command used in Unix-like operating systems (including Linux) to allow a permitted user to execute commands with elevated privileges, typically as the root user or another specified user.
