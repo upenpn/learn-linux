@@ -20,25 +20,46 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
 - **Use:**
   - Primarily used for system administration tasks such as:
     - Installing or removing system-wide packages (`apt`, `snap`, `dpkg`)
-    - 
-| Feature              | apt                                                           | snap                                                             | dpkg                                                       |
-|----------------------|---------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------|
-| Installation Source  | Online repositories maintained by the distribution           | Snap Store (online platform by Canonical)                       | `.deb` files downloaded from the internet or other sources |
-| Dependency Handling  | Automatic resolution of dependencies                          | Self-contained packages with bundled dependencies               | Manual resolution of dependencies (not automatic)          |
-| Installation Command | `sudo apt install package_name`                               | `sudo snap install package_name`                               | `sudo dpkg -i package_name.deb`                            |
-| After Removal        | Removes package and configuration files                        | Completely removes package and its dependencies                 | Removes package but retains configuration files             |
-| Cleanup of Unused Dependencies | `sudo apt autoremove`                                      | Automatically handled by snap (no residual dependencies)        | Manual purging of unused dependencies with `sudo dpkg -P`   |
-| Safety               | Generally safe due to curated repositories                    | Generally safe due to sandboxed packages and Snap Store         | Safe when used with trusted `.deb` packages                 |
-| When to Use          | Suitable for everyday software installations                  | Suitable for isolated packages, bleeding-edge software         | Suitable for specific package installations and control    |
-| Recommended Use Case | Desktop and server applications, system utilities             | Development, testing, and experimental software                | Advanced users requiring specific package management        |
-| Example 1            | `sudo apt update` (Updates package lists)                     | `sudo snap refresh` (Updates snap packages)                     | `sudo dpkg -l` (Lists installed packages)                   |
-| Example 2            | `sudo apt upgrade` (Upgrades installed packages)              | `sudo snap revert package_name` (Reverts a snap package)        | `sudo dpkg -r package_name` (Removes a package)             |
-| Example 3            | `sudo apt remove package_name` (Removes a package)            | `sudo snap disable package_name` (Disables a snap package)      | `sudo dpkg -i package_name.deb` (Installs a `.deb` package) |
-| Example 4            | `sudo apt search keyword` (Searches for packages)             | `sudo snap find keyword` (Searches for snaps)                   | `sudo dpkg -S /path/to/file` (Locates which package a file belongs to) |
-| Example 5            | `sudo apt list --upgradable` (Lists upgradable packages)      | `sudo snap list --all` (Lists all installed snaps)              | `sudo dpkg --configure -a` (Configures all unconfigured packages) |
-| Example 6            | `sudo apt full-upgrade` (Upgrades packages with dependencies) | `sudo snap info package_name` (Displays information about a snap) | `sudo dpkg-reconfigure package_name` (Reconfigures a package)  |
-| Installation Example | `sudo apt install firefox` (Installs Firefox browser)         | `sudo snap install spotify` (Installs Spotify music player)     | `sudo dpkg -i slack.deb` (Installs Slack messaging app)     |
+        - apt, snap, and dpkg are all commonly referred to as package managers in the context of Linux systems. 
+        - Each serves a specific purpose in managing software packages, dependencies, and installations on a Linux-based operating system
+ ## Package Managers in Linux Systems
 
+| Package Manager | Description                                                                                      | Purpose                                                                                                     | Strengths                                                                                                    | Example Usage                             |
+|-----------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------|
+| apt             | A command-line tool primarily used in Debian-based distributions like Ubuntu for package management | Handles installation, upgrading, and removal of software packages, relying on repositories for management | Well-suited for managing system-wide packages and dependencies from official repositories                 | `sudo apt install package_name`           |
+| snap            | A software packaging and deployment system developed by Canonical for Ubuntu                     | Manages self-contained Snap packages with all dependencies bundled                                         | Offers isolation and security benefits, allowing independent distribution and updates of applications   | `sudo snap install package_name`          |
+| dpkg            | Low-level package manager used in Debian-based distributions, including Ubuntu                  | Handles installation, removal, and information about .deb packages                                          | Useful for manual package management or troubleshooting tasks                                           | `sudo dpkg -i package_name.deb`          |
+
+## Similarities and Differences
+
+| Feature               | apt                                                           | snap                                                             | dpkg                                                             |
+|-----------------------|---------------------------------------------------------------|------------------------------------------------------------------|------------------------------------------------------------------|
+| Installation Source   | Online repositories maintained by the distribution           | Snap Store (online platform by Canonical)                       | `.deb` files downloaded from the internet or other sources       |
+| Dependency Handling   | Automatic resolution of dependencies                          | Self-contained packages with bundled dependencies               | Manual resolution of dependencies (not automatic)                |
+| Installation Command  | `sudo apt install package_name`                               | `sudo snap install package_name`                               | `sudo dpkg -i package_name.deb`                                   |
+| After Removal         | Removes package and configuration files                        | Completely removes package and its dependencies                 | Removes package but retains configuration files                   |
+| Cleanup of Unused Dependencies | `sudo apt autoremove`                                      | Automatically handled by snap (no residual dependencies)        | Manual purging of unused dependencies with `sudo dpkg -P`         |
+| Safety                | Generally safe due to curated repositories                    | Generally safe due to sandboxed packages and Snap Store         | Safe when used with trusted `.deb` packages                       |
+| When to Use           | Suitable for everyday software installations                  | Suitable for isolated packages, bleeding-edge software         | Suitable for specific package installations and control          |
+| Recommended Use Case  | Desktop and server applications, system utilities             | Development, testing, and experimental software                | Advanced users requiring specific package management              |
+| Example 1             | `sudo apt update` (Updates package lists)                     | `sudo snap refresh` (Updates snap packages)                     | `sudo dpkg -l` (Lists installed packages)                         |
+| Example 2             | `sudo apt upgrade` (Upgrades installed packages)              | `sudo snap revert package_name` (Reverts a snap package)        | `sudo dpkg -r package_name` (Removes a package)                   |
+| Example 3             | `sudo apt remove package_name` (Removes a package)            | `sudo snap disable package_name` (Disables a snap package)      | `sudo dpkg -i package_name.deb` (Installs a `.deb` package)       |
+| Example 4             | `sudo apt search keyword` (Searches for packages)             | `sudo snap find keyword` (Searches for snaps)                   | `sudo dpkg -S /path/to/file` (Locates which package a file belongs to) |
+| Example 5             | `sudo apt list --upgradable` (Lists upgradable packages)      | `sudo snap list --all` (Lists all installed snaps)              | `sudo dpkg --configure -a` (Configures all unconfigured packages) |
+| Example 6             | `sudo apt full-upgrade` (Upgrades packages with dependencies) | `sudo snap info package_name` (Displays information about a snap) | `sudo dpkg-reconfigure package_name` (Reconfigures a package)    |
+| Installation Example  | `sudo apt install firefox` (Installs Firefox browser)         | `sudo snap install spotify` (Installs Spotify music player)     | `sudo dpkg -i slack.deb` (Installs Slack messaging app)          |
+
+
+**Similarities:**
+- Handle software packages on Linux systems
+- Support installation, upgrading, and removal of packages
+- Manage dependencies and resolve conflicts automatically
+
+**Differences:**
+- `apt` and `dpkg` are specific to Debian-based systems, while `snap` is more universal
+- `apt` and `dpkg` rely on repositories for package management, while `snap` uses self-contained packages
+- `snap` offers isolation and security benefits by bundling dependencies with packages
     - Managing services (`systemctl`)
   | Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
 |-------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------|
