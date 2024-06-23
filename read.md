@@ -1,11 +1,8 @@
 Text-Fu
-Learn basic text manipulation and navigation.
 
-## Background Information
 
-The command line, also known as the terminal or console, is a text-based interface for interacting with the operating system. It allows users to execute a wide range of commands, scripts, and programs to perform various tasks. Understanding and using command-line tools efficiently is essential for developers, system administrators, and anyone working in a Unix-like environment.
+## Learn basic text manipulation and navigation.
 
-This cheatsheet provides a comprehensive overview of commonly used commands in the command line, along with their descriptions, examples, use cases, and explanations of key concepts.
 
 ---
 
