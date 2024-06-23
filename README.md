@@ -1,4 +1,8 @@
-## `sudo` Command in Unix-like Systems
+## `sudo` Command in Unix-like Systems   
+
+## sudo` (superuser do) 
+
+## SUDO 
 
 - **Definition:**
   - Command in Unix-like systems allowing users to execute commands with administrative privileges by granting temporary administrative privileges.
