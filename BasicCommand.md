@@ -1,30 +1,18 @@
 # Command Line Cheatsheet
 
-| Command          | Description                                                      | Examples / Use Cases                                                                                       |
-|------------------|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|
-| **Shell**        |                                                                  |                                                                                                            |
-| `bash`           | Launches the Bash shell.                                         | - Default shell on many Linux/macOS systems.                                                               |
-| `zsh`            | Launches the Zsh shell.                                          | - Enhanced version of the Bourne shell. <br> - Advanced tab completion, theme support, plugin ecosystem.    |
-| `fish`           | Launches the Fish shell.                                         | - Modern syntax, auto-suggestions, syntax highlighting. <br> - User-friendly and intuitive.                 |
-| **pwd**          | Print Working Directory                                          | `pwd`: Print current working directory. <br> `pwd -P`: Outputs resolved symbolic links.                      |
-| **cd**           | Change Directory                                                 | `cd /path/to/dir`: Change current directory. <br> `cd ..`: Change to parent directory.                       |
-| **ls**           | List Directory Contents                                          | `ls`: List current directory contents. <br> `ls -l`: List detailed information.                             |
-| **mkdir**        | Make Directory                                                   | `mkdir new_dir`: Create a new directory. <br> `mkdir -p dir1/dir2`: Create nested directories.              |
-| **rm**           | Remove                                                           | `rm file.txt`: Remove a file. <br> `rm -r dir`: Remove a directory recursively.                            |
-| **cp**           | Copy                                                             | `cp file1 file2`: Copy a file. <br> `cp -r dir1 dir2`: Copy directories recursively.                       |
-| **mv**           | Move                                                             | `mv file dir`: Move a file to a directory. <br> `mv file new_file`: Rename a file.                          |
-| **touch**        | Create/Update Timestamps                                         | `touch file`: Create a new file. <br> `touch -t timestamp file`: Update file timestamp.                      |
-| **cat**          | Concatenate and Display Contents                                 | `cat file.txt`: Display file contents. <br> `cat file1 file2 > combined.txt`: Concatenate and combine files. |
-
-**References and Explanations:**
-
-- **Recursively (`-r` option):** This means performing an operation on a target and all of its contents, including subdirectories, sub-subdirectories, and so on. For example, `rm -r dir` will delete the directory "dir" and all its contents.
-  
-- **Symbolic Links:** These are special types of files that act as shortcuts or references to other files or directories in the file system. When using `pwd -P`, symbolic links are resolved to show the actual path.
-
-- **Detailed Information (`-l` option):** When using `ls -l`, you get a detailed listing of files and directories, including permissions, owner, size, and modification date.
-
-- **Forcefully (`-f` option):** This option, used with `rm -f`, forces the removal of a file without prompting for confirmation, which can be useful in scripting or automation tasks.
-
-- **Prompt Before Overwriting (`-i` option):** When using `cp -i`, a prompt appears before overwriting an existing file, helping to prevent accidental data loss.
+| Command          | Description                                                      | Examples / Use Cases                                                                                       | Reference and Explanation                                                                                                               |
+|------------------|------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| **Shell**        |                                                                  |                                                                                                            |                                                                                                                                           |
+| `bash`           | Launches the Bash shell.                                         | - Default shell on many Linux/macOS systems.                                                               |                                                                                                                                           |
+| `zsh`            | Launches the Zsh shell.                                          | - Enhanced version of the Bourne shell. <br> - Advanced tab completion, theme support, plugin ecosystem.    |                                                                                                                                           |
+| `fish`           | Launches the Fish shell.                                         | - Modern syntax, auto-suggestions, syntax highlighting. <br> - User-friendly and intuitive.                 |                                                                                                                                           |
+| **pwd**          | Print Working Directory                                          | `pwd`: Print current working directory. <br> `pwd -P`: Outputs resolved symbolic links.                      | Shows where you are in the computer's folders.                                                                                            |
+| **cd**           | Change Directory                                                 | `cd /path/to/dir`: Change current directory. <br> `cd ..`: Change to parent directory.                       | Moves you to a different folder. `..` means the folder above, while `/path/to/dir` is the folder you want to go to.                         |
+| **ls**           | List Directory Contents                                          | `ls`: List current directory contents. <br> `ls -l`: List detailed information.                             | Shows what's inside a folder. `-l` gives more details like who can use files, when they were last changed, and how big they are.           |
+| **mkdir**        | Make Directory                                                   | `mkdir new_dir`: Create a new directory. <br> `mkdir -p dir1/dir2`: Create nested directories.              | Creates a new folder. `-p` means creating the parent folders too if they don't exist.                                                      |
+| **rm**           | Remove                                                           | `rm file.txt`: Remove a file. <br> `rm -r dir`: Remove a directory recursively.                            | Deletes a file or folder. `-r` means deleting everything inside a folder too, so be careful!                                                |
+| **cp**           | Copy                                                             | `cp file1 file2`: Copy a file. <br> `cp -r dir1 dir2`: Copy directories recursively.                       | Makes a copy of a file or folder. `-r` copies everything inside a folder too, like making a photocopy of a whole book.                     |
+| **mv**           | Move                                                             | `mv file dir`: Move a file to a directory. <br> `mv file new_file`: Rename a file.                          | Moves a file to a different folder or gives it a new name.                                                                                |
+| **touch**        | Create/Update Timestamps                                         | `touch file`: Create a new file. <br> `touch -t timestamp file`: Update file timestamp.                      | Makes a new file or changes when a file was last worked on.                                                                               |
+| **cat**          | Concatenate and Display Contents                                 | `cat file.txt`: Display file contents. <br> `cat file1 file2 > combined.txt`: Concatenate and combine files. | Shows what's inside a file. `> combined.txt` puts the file contents into a new file called "combined.txt".                                 |
 
