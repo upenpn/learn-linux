@@ -23,7 +23,7 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
         - apt, snap, and dpkg are all commonly referred to as package managers in the context of Linux systems. 
         - Each serves a specific purpose in managing software packages, dependencies, and installations on a Linux-based operating system
  ## Package Managers in Linux Systems
-
+ 
 | Package Manager | Description                                                                                      | Purpose                                                                                                     | Strengths                                                                                                    | Example Usage                             |
 |-----------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------|
 | apt             | A command-line tool primarily used in Debian-based distributions like Ubuntu for package management | Handles installation, upgrading, and removal of software packages, relying on repositories for management | Well-suited for managing system-wide packages and dependencies from official repositories                 | `sudo apt install package_name`           |
@@ -61,7 +61,7 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
 - `apt` and `dpkg` rely on repositories for package management, while `snap` uses self-contained packages
 - `snap` offers isolation and security benefits by bundling dependencies with packages
     - Managing services (`systemctl`)
-  | Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
+| Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
 |-------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------|
 | Start a Service         | `sudo systemctl start service_name`                          | Starts the specified service                                         | `sudo systemctl start nginx`         |
 | Stop a Service          | `sudo systemctl stop service_name`                           | Stops the specified service                                          | `sudo systemctl stop nginx`          |
