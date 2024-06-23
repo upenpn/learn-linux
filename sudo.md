@@ -51,53 +51,54 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
           | Installation Example  | `sudo apt install firefox` (Installs Firefox browser)         | `sudo snap install spotify` (Installs Spotify music player)     | `sudo dpkg -i slack.deb` (Installs Slack messaging app)          |
 
 
-    **Similarities:**
-    - Handle software packages on Linux systems
-    - Support installation, upgrading, and removal of packages
-    - Manage dependencies and resolve conflicts automatically
+        **Similarities:**
+        - Handle software packages on Linux systems
+        - Support installation, upgrading, and removal of packages
+        - Manage dependencies and resolve conflicts automatically
 
-    **Differences:**
-    - `apt` and `dpkg` are specific to Debian-based systems, while `snap` is more universal
-    - `apt` and `dpkg` rely on repositories for package management, while `snap` uses self-contained packages
-    - `snap` offers isolation and security benefits by bundling dependencies with packages
+        **Differences:**
+        - `apt` and `dpkg` are specific to Debian-based systems, while `snap` is more universal
+        - `apt` and `dpkg` rely on repositories for package management, while `snap` uses self-contained packages
+        - `snap` offers isolation and security benefits by bundling dependencies with packages
 
 
-      - Managing services (`systemctl`)
-      | Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
-      |-------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------|
-      | Start a Service         | `sudo systemctl start service_name`                          | Starts the specified service                                         | `sudo systemctl start nginx`         |
-      | Stop a Service          | `sudo systemctl stop service_name`                           | Stops the specified service                                          | `sudo systemctl stop nginx`          |
-      | Restart a Service       | `sudo systemctl restart service_name`                        | Restarts the specified service                                       | `sudo systemctl restart nginx`       |
-      | Enable a Service        | `sudo systemctl enable service_name`                         | Enables the specified service to start at boot                        | `sudo systemctl enable nginx`        |
-      | Disable a Service       | `sudo systemctl disable service_name`                        | Disables the specified service from starting at boot                   | `sudo systemctl disable nginx`       |
-      | Check Service Status    | `sudo systemctl status service_name`                         | Displays the status of the specified service                           | `sudo systemctl status nginx`        |
-      | View Service Logs       | `sudo journalctl -u service_name`                            | Displays logs related to the specified service                         | `sudo journalctl -u nginx`            |
-      | List All Services       | `sudo systemctl list-unit-files --type=service`              | Lists all available services                                          | `sudo systemctl list-unit-files --type=service` |
-      | View Service Unit File  | `sudo systemctl cat service_name`                            | Displays the content of the unit file for the specified service       | `sudo systemctl cat nginx`            |
-      | Reload Service Settings | `sudo systemctl reload service_name`                         | Reloads the configuration of the specified service                     | `sudo systemctl reload nginx`         |
-      | View Active Services    | `sudo systemctl list-units --type=service --state=active`    | Lists all currently active services                                   | `sudo systemctl list-units --type=service --state=active` |
+ - Managing services (`systemctl`)
+                    | Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
+          |-------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------|
+          | Start a Service         | `sudo systemctl start service_name`                          | Starts the specified service                                         | `sudo systemctl start nginx`         |
+          | Stop a Service          | `sudo systemctl stop service_name`                           | Stops the specified service                                          | `sudo systemctl stop nginx`          |
+          | Restart a Service       | `sudo systemctl restart service_name`                        | Restarts the specified service                                       | `sudo systemctl restart nginx`       |
+          | Enable a Service        | `sudo systemctl enable service_name`                         | Enables the specified service to start at boot                        | `sudo systemctl enable nginx`        |
+          | Disable a Service       | `sudo systemctl disable service_name`                        | Disables the specified service from starting at boot                   | `sudo systemctl disable nginx`       |
+          | Check Service Status    | `sudo systemctl status service_name`                         | Displays the status of the specified service                           | `sudo systemctl status nginx`        |
+          | View Service Logs       | `sudo journalctl -u service_name`                            | Displays logs related to the specified service                         | `sudo journalctl -u nginx`            |
+          | List All Services       | `sudo systemctl list-unit-files --type=service`              | Lists all available services                                          | `sudo systemctl list-unit-files --type=service` |
+          | View Service Unit File  | `sudo systemctl cat service_name`                            | Displays the content of the unit file for the specified service       | `sudo systemctl cat nginx`            |
+          | Reload Service Settings | `sudo systemctl reload service_name`                         | Reloads the configuration of the specified service                     | `sudo systemctl reload nginx`         |
+          | View Active Services    | `sudo systemctl list-units --type=service --state=active`    | Lists all currently active services                                   | `sudo systemctl list-units --type=service --state=active` |
 
-      - Editing system files (`nano`, `vi`)
-        | Action                  | `nano` Command                             | `vi` Command                               | Description                                               | Example                                            |
-      |-------------------------|--------------------------------------------|--------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
-      | Open/Edit a File        | `nano /path/to/file`                       | `vi /path/to/file`                         | Opens the specified file for editing                       | `nano /etc/nginx/nginx.conf`                       |
-      | Save and Exit           | `Ctrl + O`, then `Enter`, then `Ctrl + X`  | `:wq` or `:x`                              | Saves changes and exits the editor                           | `Ctrl + O`, `Enter`, `Ctrl + X` (in nano)          |
-      | Exit Without Saving     | `Ctrl + X`                                 | `:q!`                                      | Exits the editor without saving changes                      | `Ctrl + X` (in nano) or `:q!` (in vi)             |
-      | Move Cursor             | Arrow keys                                 | Arrow keys or `hjkl` keys                  | Moves the cursor within the file                             | Arrow keys or `hjkl` keys                         |
-      | Insert/Edit Text        | Type directly                              | Press `i` to enter insert mode, then type  | Allows inserting or editing text in the file                 | Type directly (in nano) or `i` then type (in vi)   |
-      | Delete Text             | `Backspace` or `Delete` keys               | `x` or `dd`                                | Deletes characters or lines of text                           | `Backspace` or `Delete` (in nano) or `x` or `dd` (in vi) |
-      | Save Changes            | `Ctrl + O`, then `Enter`                   | `:w` or `:wq`                              | Saves changes to the file                                     | `Ctrl + O`, `Enter` (in nano) or `:w` (in vi)      |
-      | Exit Insert Mode        | `Ctrl + X`                                 | `Esc`                                      | Exits insert mode (if applicable)                             | `Ctrl + X` (in nano) or `Esc` (in vi)             |
-      | Search for Text         | `Ctrl + W`, then type search query         | `/search_term`                             | Searches for a specific text within the file                  | `Ctrl + W`, type search query (in nano)            |
-      | Undo                    | `Ctrl + Shift + _`                         | `u`                                        | Undoes the last change made to the file                        | `Ctrl + Shift + _` (in nano) or `u` (in vi)       |
-      | Redo                    | `Alt + U`                                  | `Ctrl + R`                                 | Redoes the last undone change                                  | `Alt + U` (in nano) or `Ctrl + R` (in vi)        |
-      | Open New/Blank File     | `nano`                                     | `vi` or `vim`                              | Opens a new or blank file for editing                          | `nano` (to open a new file in nano)                |
-      | Save As                 | `Ctrl + O`, then `Enter`, then enter filename | `:w filename`                           | Saves the current file with a new name                         | `Ctrl + O`, `Enter`, enter filename (in nano)       |
-      | Copy Text               | `Alt + 6`, then move cursor                | `yy`                                       | Copies selected text (highlight text then use command)         | `Alt + 6`, move cursor (in nano) or `yy` (in vi)  |
-      | Paste Text              | `Ctrl + U`                                 | `p`                                        | Pastes copied text                                             | `Ctrl + U` (in nano) or `p` (in vi)               |
 
-    - Performing other administrative actions that require heightened permissions
-  - Allows users to temporarily execute commands with administrative privileges by verifying their identity with a password.
+- Editing system files (`nano`, `vi`)
+            | Action                  | `nano` Command                             | `vi` Command                               | Description                                               | Example                                            |
+          |-------------------------|--------------------------------------------|--------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
+          | Open/Edit a File        | `nano /path/to/file`                       | `vi /path/to/file`                         | Opens the specified file for editing                       | `nano /etc/nginx/nginx.conf`                       |
+          | Save and Exit           | `Ctrl + O`, then `Enter`, then `Ctrl + X`  | `:wq` or `:x`                              | Saves changes and exits the editor                           | `Ctrl + O`, `Enter`, `Ctrl + X` (in nano)          |
+          | Exit Without Saving     | `Ctrl + X`                                 | `:q!`                                      | Exits the editor without saving changes                      | `Ctrl + X` (in nano) or `:q!` (in vi)             |
+          | Move Cursor             | Arrow keys                                 | Arrow keys or `hjkl` keys                  | Moves the cursor within the file                             | Arrow keys or `hjkl` keys                         |
+          | Insert/Edit Text        | Type directly                              | Press `i` to enter insert mode, then type  | Allows inserting or editing text in the file                 | Type directly (in nano) or `i` then type (in vi)   |
+          | Delete Text             | `Backspace` or `Delete` keys               | `x` or `dd`                                | Deletes characters or lines of text                           | `Backspace` or `Delete` (in nano) or `x` or `dd` (in vi) |
+          | Save Changes            | `Ctrl + O`, then `Enter`                   | `:w` or `:wq`                              | Saves changes to the file                                     | `Ctrl + O`, `Enter` (in nano) or `:w` (in vi)      |
+          | Exit Insert Mode        | `Ctrl + X`                                 | `Esc`                                      | Exits insert mode (if applicable)                             | `Ctrl + X` (in nano) or `Esc` (in vi)             |
+          | Search for Text         | `Ctrl + W`, then type search query         | `/search_term`                             | Searches for a specific text within the file                  | `Ctrl + W`, type search query (in nano)            |
+          | Undo                    | `Ctrl + Shift + _`                         | `u`                                        | Undoes the last change made to the file                        | `Ctrl + Shift + _` (in nano) or `u` (in vi)       |
+          | Redo                    | `Alt + U`                                  | `Ctrl + R`                                 | Redoes the last undone change                                  | `Alt + U` (in nano) or `Ctrl + R` (in vi)        |
+          | Open New/Blank File     | `nano`                                     | `vi` or `vim`                              | Opens a new or blank file for editing                          | `nano` (to open a new file in nano)                |
+          | Save As                 | `Ctrl + O`, then `Enter`, then enter filename | `:w filename`                           | Saves the current file with a new name                         | `Ctrl + O`, `Enter`, enter filename (in nano)       |
+          | Copy Text               | `Alt + 6`, then move cursor                | `yy`                                       | Copies selected text (highlight text then use command)         | `Alt + 6`, move cursor (in nano) or `yy` (in vi)  |
+          | Paste Text              | `Ctrl + U`                                 | `p`                                        | Pastes copied text                                             | `Ctrl + U` (in nano) or `p` (in vi)               |
+
+- Performing other administrative actions that require heightened permissions
+- Allows users to temporarily execute commands with administrative privileges by verifying their identity with a password.
   
 - **Usage:**
   - Prefix commands needing elevated privileges with `sudo`.
