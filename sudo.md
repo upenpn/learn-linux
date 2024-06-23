@@ -63,7 +63,7 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
 
 
  - Managing services (`systemctl`)
-                    | Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
+          | Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
           |-------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------|
           | Start a Service         | `sudo systemctl start service_name`                          | Starts the specified service                                         | `sudo systemctl start nginx`         |
           | Stop a Service          | `sudo systemctl stop service_name`                           | Stops the specified service                                          | `sudo systemctl stop nginx`          |
@@ -79,7 +79,7 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
 
 
 - Editing system files (`nano`, `vi`)
-            | Action                  | `nano` Command                             | `vi` Command                               | Description                                               | Example                                            |
+          | Action                  | `nano` Command                             | `vi` Command                               | Description                                               | Example                                            |
           |-------------------------|--------------------------------------------|--------------------------------------------|-----------------------------------------------------------|----------------------------------------------------|
           | Open/Edit a File        | `nano /path/to/file`                       | `vi /path/to/file`                         | Opens the specified file for editing                       | `nano /etc/nginx/nginx.conf`                       |
           | Save and Exit           | `Ctrl + O`, then `Enter`, then `Ctrl + X`  | `:wq` or `:x`                              | Saves changes and exits the editor                           | `Ctrl + O`, `Enter`, `Ctrl + X` (in nano)          |
