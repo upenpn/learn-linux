@@ -16,3 +16,15 @@
 | **touch**        | Create/Update Timestamps                                         | `touch file`: Create a new file. <br> `touch -t timestamp file`: Update file timestamp.                      |
 | **cat**          | Concatenate and Display Contents                                 | `cat file.txt`: Display file contents. <br> `cat file1 file2 > combined.txt`: Concatenate and combine files. |
 
+**References and Explanations:**
+
+- **Recursively (`-r` option):** This means performing an operation on a target and all of its contents, including subdirectories, sub-subdirectories, and so on. For example, `rm -r dir` will delete the directory "dir" and all its contents.
+  
+- **Symbolic Links:** These are special types of files that act as shortcuts or references to other files or directories in the file system. When using `pwd -P`, symbolic links are resolved to show the actual path.
+
+- **Detailed Information (`-l` option):** When using `ls -l`, you get a detailed listing of files and directories, including permissions, owner, size, and modification date.
+
+- **Forcefully (`-f` option):** This option, used with `rm -f`, forces the removal of a file without prompting for confirmation, which can be useful in scripting or automation tasks.
+
+- **Prompt Before Overwriting (`-i` option):** When using `cp -i`, a prompt appears before overwriting an existing file, helping to prevent accidental data loss.
+

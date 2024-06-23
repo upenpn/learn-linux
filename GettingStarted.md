@@ -76,7 +76,6 @@ Desktop environments (DEs) provide graphical user interfaces (GUIs) for Linux. H
 | LXDE                | Lightweight, minimalistic, suitable for low-resource systems.                                            | Lubuntu, Knoppix                                |
 | Pantheon            | Designed for elementary OS, minimalist and elegant.                                                     | elementary OS                                   |
 
-
 ## Linux Distributions and Their Bases
 
 | Base System       | Examples                        |
