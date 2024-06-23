@@ -38,13 +38,7 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
     - Installing or removing system-wide packages (`apt`, `snap`, `dpkg`)
         - apt, snap, and dpkg are all commonly referred to as package managers in the context of Linux systems. 
         - Each serves a specific purpose in managing software packages, dependencies, and installations on a Linux-based operating system
-          ## Package Managers in Linux Systems
-          
-          | Package Manager | Description                                                                                      | Purpose                                                                                                     | Strengths                                                                                                    | Example Usage                             |
-          |-----------------|--------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------|-------------------------------------------|
-          | apt             | A command-line tool primarily used in Debian-based distributions like Ubuntu for package management | Handles installation, upgrading, and removal of software packages, relying on repositories for management | Well-suited for managing system-wide packages and dependencies from official repositories                 | `sudo apt install package_name`           |
-          | snap            | A software packaging and deployment system developed by Canonical for Ubuntu                     | Manages self-contained Snap packages with all dependencies bundled                                         | Offers isolation and security benefits, allowing independent distribution and updates of applications   | `sudo snap install package_name`          |
-          | dpkg            | Low-level package manager used in Debian-based distributions, including Ubuntu                  | Handles installation, removal, and information about .deb packages                                          | Useful for manual package management or troubleshooting tasks                                           | `sudo dpkg -i package_name.deb`          |
+                                                   | `sudo dpkg -i package_name.deb`          |
 
           ## Similarities and Differences
 
