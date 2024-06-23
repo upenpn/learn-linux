@@ -1,14 +1,31 @@
- **************************Sudo**************************************
-**Definition:** = Command in Unix-like systems allowing users to execute commands with administrative privileges by granting temporary administrative privileges.
-**Purpose:** = sudo (superuser do) is a command used in Unix-like operating systems (including Linux) to allow a permitted user to execute commands with elevated privileges, typically as the root user or another specified user.
-**Use:** = It is primarily used for system administration tasks such as installing or removing system-wide packages (apt, snap, dpkg), managing services (systemctl), editing system files (nano, vi), and performing other administrative actions that require heightened permissions.
-**Use** = sudo allows users to temporarily execute commands with administrative privileges by verifying their identity with a password, ensuring secure and controlled system management. (Tesaile everytime sudo kunai command hane paxi admin password magxa)
-**Usage**: Prefix commands needing elevated privileges with sudo.
-**Security**: Reduces risks by limiting administrative access.
-**Configuration**: Managed via sudoers file for user permissions.
+## `sudo` Command in Unix-like Systems
+
+- **Definition:**
+  - Command in Unix-like systems allowing users to execute commands with administrative privileges by granting temporary administrative privileges.
+  
+- **Purpose:**
+  - `sudo` (superuser do) is a command used in Unix-like operating systems (including Linux) to allow a permitted user to execute commands with elevated privileges, typically as the root user or another specified user.
+  
+- **Use:**
+  - Primarily used for system administration tasks such as:
+    - Installing or removing system-wide packages (`apt`, `snap`, `dpkg`)
+    - Managing services (`systemctl`)
+    - Editing system files (`nano`, `vi`)
+    - Performing other administrative actions that require heightened permissions
+  - Allows users to temporarily execute commands with administrative privileges by verifying their identity with a password.
+  
+- **Usage:**
+  - Prefix commands needing elevated privileges with `sudo`.
+  
+- **Security:**
+  - Reduces risks by limiting administrative access.
+  
+- **Configuration:**
+  - Managed via `sudoers` file for user permissions.
 
 
-***Top Sudo commands***
+
+## ***Top Sudo commands***
 | Command                              | Purpose and Use                                                  | Example(s)                                       |
 |--------------------------------------|------------------------------------------------------------------|--------------------------------------------------|
 | sudo apt update                      | Refreshes the list of available packages                         | sudo apt update                                  |
