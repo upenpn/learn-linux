@@ -60,7 +60,10 @@ Introduction to Administrative Privileges: A Comparison Guide for Beginners
 - `apt` and `dpkg` are specific to Debian-based systems, while `snap` is more universal
 - `apt` and `dpkg` rely on repositories for package management, while `snap` uses self-contained packages
 - `snap` offers isolation and security benefits by bundling dependencies with packages
-    - Managing services (`systemctl`)
+
+
+- Managing services (`systemctl`)
+
 | Action                  | `systemctl` Command                                          | Description                                                          | Example                              |
 |-------------------------|--------------------------------------------------------------|----------------------------------------------------------------------|--------------------------------------|
 | Start a Service         | `sudo systemctl start service_name`                          | Starts the specified service                                         | `sudo systemctl start nginx`         |
